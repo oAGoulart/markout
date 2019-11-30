@@ -66,7 +66,7 @@ pip install -r requirements.txt
 python markout.py
 ``
 
-### Final Thogths
+### Final Thoughts
 
 Feel free to leave your contribution here, I would really appreciate it!
 Also, if you have any doubts or troubles using this script just contact me or leave a issue.
