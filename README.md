@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 
-A small Python script I made to extract Markdown from HTML pages. It is very customizable and I made it to suit my needs (extract many HTML pages code to Markdown, but only tags I wanted). Due to its purpose being to be able to convert specific HTML tags into a desired Markdown format, this script does not generate standard Markdown, rather, it uses custom tokens specified by you, so the results follow your fomatting.
+A small Python script I made to extract Markdown from HTML pages. It is very customizable and I made it to suit my needs (extract many HTML pages code to Markdown, but only tags I wanted). Due to its purpose being to be able to convert specific HTML tags into a desired Markdown format, this script does not generate standard Markdown, rather, it uses custom tokens specified by you, so the results follow your formatting.
 
 ### Configuration
 
