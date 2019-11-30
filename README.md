@@ -61,10 +61,10 @@ On the example above, the HTML tag `<header>` will be replaced with `#` and its 
 
 To run this script, you will need `Python 3` installed. After that, just run the commands below:
 
-``
+````
 pip install -r requirements.txt
 python markout.py
-``
+````
 
 ### Final Thoughts
 
