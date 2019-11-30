@@ -2,16 +2,16 @@
 
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 
-A small Python script I made to extract Markdown from HTML pages. It is very customizable and I made it to suit my needs (extract many HTML pages code to Markdown, but only tags I wanted). Due to its purpose being to be able to convert specific HTML tags into a disered Markdown format, this script does not generate standard Markdown, rather, it uses custom tokens specified by you, so the results follow your fomatting.
+A small Python script I made to extract Markdown from HTML pages. It is very customizable and I made it to suit my needs (extract many HTML pages code to Markdown, but only tags I wanted). Due to its purpose being to be able to convert specific HTML tags into a desired Markdown format, this script does not generate standard Markdown, rather, it uses custom tokens specified by you, so the results follow your fomatting.
 
 ### Configuration
 
-All configurations are put into a single file: `.markourc.json` (you can specify another one). If you don't load a configuration file the script will use its default values.
+All configurations are put into a single file: `.markoutrc.json` (you can specify another one). If you don't load a configuration file the script will use its default values.
 
 ---
 
 #### Config file
-The examples below are the same values set on the `.markourc.json` that is in this repository.
+The examples below are the same values set on the `.markoutrc.json` that is in this repository.
 
 **links:** `links` - *object* of links to be extracted, each link has a destination (path) value.
 Example:
@@ -35,7 +35,7 @@ Example:
 }
 ````
 
-**tokens:** `tokens` - *object* in which each specified HTML tag will be replaced with a string tha will be formatted.
+**tokens:** `tokens` - *object* in which each specified HTML tag will be replaced with a string that will be formatted.
 Example:
 
 ````
