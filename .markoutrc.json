@@ -1,0 +1,16 @@
+{
+  "links": {
+    "http://cursos.unipampa.edu.br/cursos/ppges/": "out/sobre.md"
+  },
+  "only_on": "article",
+  "tokens": {
+    "header": "# {}",
+    "h1": "\n# {}",
+    "h2": "\n# {}",
+    "b": "\n## {}",
+    "li": "+ {}",
+    "i": "** {} **",
+    "p": "\n{}",
+    "span": "{}"
+  }
+}
