@@ -29,7 +29,7 @@ def extract_markdown(url, tokens, only_on = "html"):
       for key in tokens.keys():
         # iterate through each element that was set on tokens
         for e in d(key):
-          # verify <a> and <img> cases
+          # verify <a> and <img> special cases
           if key == "a":
             inline_md = ":markdown:" + tokens[key].format(pq(e).text(), pq(e).attr("href")) + ":markdown:"
             html = html.replace(str(pq(e)), inline_md)
@@ -40,10 +40,10 @@ def extract_markdown(url, tokens, only_on = "html"):
             inline_md = ":markdown:" + tokens[key].format(pq(e).text()) + ":markdown:"
             html = html.replace(str(pq(e)), inline_md)
 
-      # prepare regex to search for
+      # prepare regex to do search
       r = re.compile(r":markdown:([\s\S]*?):markdown:")
 
-      # extract markdown from html
+      # extract generated markdown from html
       for md in r.finditer(html):
         markdown += md.group(1) + "\n"
 
