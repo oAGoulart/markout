@@ -7,7 +7,7 @@ import os
 import urllib.request
 from pyquery import PyQuery as pq
 
-def extract_markdown(url, tokens, only_on = 'html'):
+def extract_markdown(url, tokens, only_on = 'body'):
   """Generate Markdown code from a HTML page.
 
   Keyword arguments:
@@ -64,12 +64,16 @@ def main():
   try:
     with open(f, 'r') as opt_file:
       contents = json.loads(opt_file.read())
-  except FileNotFoundError:
-    print('Error: File not accessible!')
 
-  tokens = contents['tokens'] if contents is not None else {'p': "{}"}
-  only_on = contents['only_on'] if contents is not None else 'body'
-  links = contents['links'] if contents is not None else {'https://docs.python.org/3/': 'out.md'}
+    tokens = contents['tokens']
+    only_on = contents['only_on']
+    links = contents['links']
+  except FileNotFoundError:
+    tokens = {'p': "{}"}
+    only_on = 'body'
+    links = {'https://docs.python.org/3/': 'out.md'}
+
+    print('Warning: Config file not accessible! Using defaults.')
 
   # Iterate through each link and write out the results
   for link in links.keys():
@@ -80,7 +84,7 @@ def main():
       with open(f, 'w+') as dest_file:
         dest_file.write(extract_markdown(link, tokens, only_on))
     except IsADirectoryError:
-      print('Error: This is not a file!')
+      print('Error: Destination file is invalid!')
 
 if __name__ == '__main__':
   main()
