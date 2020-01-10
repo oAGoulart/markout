@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import re
 import urllib.request
 from pyquery import PyQuery as pq
@@ -22,6 +23,7 @@ def extract(url, tokens, only_on = 'body'):
         html = response.read().decode('utf8')
     except urllib.error.HTTPError as e:
       print('Error: Request error, code:', e.code)
+      sys.exit()
 
     # Remove useless content
     d = pq(html)

@@ -11,19 +11,19 @@ A small Python package I made to extract HTML pages contents. It is very customi
 To use this package you will need to install it using `pip`:
 
 ```sh
-pip install markout
+pip install markout_html
 ```
 
 Then just import it into your code:
 
 ```python
-from markout import m
+import markout_html
 ```
 
 After that, you can use the `extract` function:
 
 ```python
-result = m.extract(
+result = markout_html.extract(
   # HTML page link
   'http://example.page.com/blog/some_post.html',
 

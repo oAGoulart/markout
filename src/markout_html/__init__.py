@@ -3,7 +3,7 @@
 import json
 import sys
 from pathlib import Path
-from .markout import extract
+from .markout_html import extract
 
 def main():
   """Entry point for the application script"""

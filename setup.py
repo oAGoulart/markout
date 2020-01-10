@@ -8,8 +8,8 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
   long_description = f.read()
 
 setup(
-  name='markout',
-  version='0.1.0',
+  name='markout_html',
+  version='0.1.1',
   description='A tool to extract HTML contents',
   long_description=long_description,
   long_description_content_type='text/markdown',
@@ -30,7 +30,7 @@ setup(
   install_requires=['pyquery>=1.3'],
   entry_points={
     'console_scripts': [
-      'markout=markout:main',
+      'markout_html=markout_html:main',
     ],
   },
   project_urls={
