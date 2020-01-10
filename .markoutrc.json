@@ -1,6 +1,6 @@
 {
   "links": {
-    "http://cursos.unipampa.edu.br/cursos/ppges/": "out/sobre.md"
+    "https://docs.python.org/3/": "out/post.md"
   },
   "only_on": "article",
   "tokens": {
