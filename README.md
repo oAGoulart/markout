@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 
-A small Python package I made to extract HTML content from web pages. It is very customizable and I made it to fit my needs (extract multiple pages' code to Markdown, but only some HTML tags I needed). Due to its purpose being able to convert specific HTML tags into a desired Markdown format this script does not generate any standard output, rather, it uses custom tokens specified in a configuration file, so the output can be formated into any anything.
+A small Python package I made to extract HTML content from web pages. It is very customizable and I made it to fit my needs (extract multiple pages' code to Markdown, but only some HTML tags I needed). Due to its purpose being able to convert specific HTML tags into a desired Markdown format this script does not generate any standard output, rather, it uses custom tokens specified in a configuration file, so the output can be formatted into any anything.
 
 ## Usage
 
