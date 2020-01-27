@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
   name='markout_html',
-  version='0.1.1',
+  version='0.1.2',
   description='A tool to extract HTML contents',
   long_description=long_description,
   long_description_content_type='text/markdown',
