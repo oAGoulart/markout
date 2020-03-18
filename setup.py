@@ -14,7 +14,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
   name=__project__,
   version=__version__,
-  description='A tool to extract HTML contents',
+  description='A small Python package to extract content from web pages.',
   long_description=long_description,
   long_description_content_type='text/markdown',
   url='https://github.com/oAGoulart/markout',
