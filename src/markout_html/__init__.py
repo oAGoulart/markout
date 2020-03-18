@@ -34,6 +34,6 @@ def main():
         f.parent.mkdir(parents=True, exist_ok=True)
 
       with f.open('w+') as dest_file:
-        dest_file.write(extract(link, tokens, only_on))
+        dest_file.write(extract_url(link, tokens, only_on))
     except IOError:
       print('Error: Input/output error')
