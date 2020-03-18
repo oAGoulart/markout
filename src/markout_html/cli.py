@@ -6,7 +6,7 @@ import json
 import sys
 import argparse
 from pathlib import Path
-from extract import *
+from .extract import *
 
 def main():
   """Entry point for the application script"""
