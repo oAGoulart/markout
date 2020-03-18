@@ -2,10 +2,10 @@
 
 """Setup script for Markout."""
 
+from src.markout_html import __project__, __version__
+
 from setuptools import setup, find_packages
 from os import path
-
-from markout_html import __project__, __version__
 
 here = path.abspath(path.dirname(__file__))
 
