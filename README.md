@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 ![Python package](https://github.com/oAGoulart/markout/workflows/Python%20package/badge.svg)
 
-A small Python package I made to extract HTML content from web pages. It is very customizable and I made it to fit my needs (extract multiple pages' code to Markdown, but only some HTML tags I needed). Due to its purpose being able to convert specific HTML tags into a desired Markdown format this script does not generate any standard output, rather, it uses custom tokens specified in a configuration file, so the output can be formatted into any anything.
+A small Python package I made to extract HTML content from web pages. It is very customizable and I made it to fit my needs (extract multiple pages' code to Markdown, but only some HTML tags which I needed). Due to its purpose being able to convert specific HTML tags into a desired Markdown format this script does not generate any standard output, rather, it uses custom tokens specified in a configuration file, so the output can be formatted into any anything.
 
 ## Usage
 
@@ -18,15 +18,28 @@ pip install markout-html
 Then just import it into your code:
 
 ```python
-import markout-html
+from markout_html import *
 ```
 
-After that you can use the `extract` function:
+After that you can use the `extract_url` and `extract_html` functions:
 
 ```python
-result = markout-html.extract(
+result = extract_url(
   # HTML page link
   'http://example.page.com/blog/some_post.html',
+
+  # Tokens to format each HTML tags contents (you can extract only the ones you want)
+  {
+    'p': "\n** {} **"
+  },
+
+  # Only extract contents inside this tag
+  'article'
+)
+
+result = extract_html(
+  # HTML page link
+  '<html>some html code</html>',
 
   # Tokens to format each HTML tags contents (you can extract only the ones you want)
   {
@@ -40,16 +53,20 @@ result = markout-html.extract(
 
 ### Using the CLI command
 
-Below are a few examples with better description on how to use this package command if you don't want to create a Python script:
+Below are a few examples with better description on how to use this package command if you don't want to create a Python script!
+
+If you just want to extract using a string in the terminal, you can use `markout_html --extract [string]`.
+
+You can use the command `markout_html` with the flag `--help` for more info.
 
 #### Configuration
 
-All configurations can be found into a single file: `.markoutrc.json` (you can specify another name in the terminal), if you don't load a configuration file the script will use its default values. There is an example of configuration in the repository root!
+All configurations can be found into a single file: `.markoutrc.json` (you can specify another name in the terminal with the flag `--config`), if you don't load a configuration file the script will use its default values. There is an example of configuration in the repository root!
 
 To specify a different configuration file use:
 
 ```sh
-markout <file_name>
+markout_html --config [filename]
 ```
 
 #### The configuration file values

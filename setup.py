@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+"""Setup script for Markout."""
+
 from setuptools import setup, find_packages
 from os import path
 
@@ -8,8 +12,8 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
   long_description = f.read()
 
 setup(
-  name='markout_html',
-  version='0.1.4',
+  name=__project__,
+  version=__version__,
   description='A tool to extract HTML contents',
   long_description=long_description,
   long_description_content_type='text/markdown',
@@ -30,7 +34,7 @@ setup(
   install_requires=['pyquery>=1.3'],
   entry_points={
     'console_scripts': [
-      'markout_html=markout_html:main',
+      'markout_html=markout_html.cli:main',
     ],
   },
   project_urls={

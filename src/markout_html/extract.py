@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+"""Markout HTML extraction."""
+
 import sys
 import re
 import urllib.request

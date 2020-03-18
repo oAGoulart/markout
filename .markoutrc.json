@@ -2,7 +2,7 @@
   "links": {
     "https://docs.python.org/3/": "out/post.md"
   },
-  "only_on": "article",
+  "only_on": "body",
   "tokens": {
     "header": "# {}",
     "h1": "\n# {}",
