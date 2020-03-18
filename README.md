@@ -31,7 +31,7 @@ result = markout-html.extract(
   # Tokens to format each HTML tags contents (you can extract only the ones you want)
   {
     'p': "\n** {} **"
-  }
+  },
 
   # Only extract contents inside this tag
   'article'
