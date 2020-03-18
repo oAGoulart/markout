@@ -38,7 +38,7 @@ result = extract_url(
 )
 
 result = extract_html(
-  # HTML page link
+  # HTML code string
   '<html>some html code</html>',
 
   # Tokens to format each HTML tags contents (you can extract only the ones you want)
