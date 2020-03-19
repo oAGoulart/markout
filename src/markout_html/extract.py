@@ -4,6 +4,7 @@
 
 import sys
 import re
+import logging
 import urllib.request
 from pyquery import PyQuery as pq
 
@@ -63,7 +64,7 @@ def extract_url(url, tokens, only_on = 'body'):
       with urllib.request.urlopen(req) as response:
         html = response.read().decode('utf8')
     except urllib.error.HTTPError as e:
-      print('Error: Request error, code:', e.code)
+      logging.debug('Request error, code:', e.code)
       sys.exit()
 
     result = extract_html(html, tokens, only_on)
