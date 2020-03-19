@@ -5,6 +5,7 @@
 import json
 import sys
 import argparse
+import logging
 from pathlib import Path
 from .extract import *
 
@@ -27,11 +28,11 @@ def main():
     only_on = contents['only_on']
     links = contents['links']
   except FileNotFoundError:
-    tokens = {'p': "{}"}
+    tokens = {'p': "\n{}"}
     only_on = 'body'
     links = {'https://docs.python.org/3/': 'out.md'}
 
-    print('Warning: Config file not accessible! Using default values.')
+    logging.debug('Config file not accessible! Using default values.')
   
   # Terminal arguments have priority
   if args.tokens is not None:
@@ -42,7 +43,7 @@ def main():
     links = json.loads(args.links)
 
   if args.extract is not None:
-    print(extract_html(extract, tokens, only_on))
+    print(extract_html(args.extract, tokens, only_on), end="")
   else:
     # Iterate through each link and write out the results
     for link in links.keys():
@@ -55,7 +56,7 @@ def main():
         with f.open('w+') as dest_file:
           dest_file.write(extract_url(link, tokens, only_on))
       except IOError:
-        print('Error: Input/output error')
+        logging.debug('Input/output error')
 
 if __name__ == '__main__':
   main()
