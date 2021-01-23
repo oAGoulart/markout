@@ -116,8 +116,6 @@ Example:
 
 On the example above, the contents of the HTML tag `<header>` will be extract into the `# {}` string, so for example, if we had `<header>Some text here!</header>` the result would've been `# Some text here!` (this formats the text into Markdown).
 
----
-
 ## Contributions
 
 Feel free to leave your contribution here, I would really appreciate it!
